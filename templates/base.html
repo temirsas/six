@@ -14,13 +14,15 @@
             <a class="navbar-brand" href="{% url 'home' %}">Newspaper</a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             {% if user.is_authenticated %}
-              <li><a href="{% url 'article_new' %}" class="nav-link px-2 link-dark">+ New</a></li>
+              <li><a href="{% url 'article_new' %}" class="nav-link px-2 link-dark">+ New 😃</a></li>
+              <li><a href="{% url 'article_list' %}" class="nav-link px-2 link-dark">Articles</a></li>
             </ul>
             <div class="dropdown text-end">
               <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                 id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ user.username }}
               </a>
+              <p><a href="{% url 'password_change' %}" class="nav-link px-2 link-green"> Password Change</a></p>
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                 <li><a class="dropdown-item" href="{% url 'password_change'%}">
                   Change password</a></li>
